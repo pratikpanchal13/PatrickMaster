@@ -11,67 +11,81 @@ import Alamofire
 
 class PKLoginVC: UIViewController {
 
+    //---------------------------------------------------
+    //MARK: - Variable Declaration For ModelObject
+    //---------------------------------------------------
     var objPKLoginModel : PKLoginModel?
 
+    //---------------------------------------------------
+    //MARK: - Outlets
+    //---------------------------------------------------
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+  
+    
+    //---------------------------------------------------
+    //MARK: - View Life Cycle
+    //---------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
+  
+    //---------------------------------------------------
+    //MARK: - Button Action Event
+    //---------------------------------------------------
     @IBAction func btnLoginClicked(_ sender: Any) {
-     
-        self.APICALLING()
         
-        
+        self.validationCheck()   // For Validation Checking
         
     }
     
-    
-    func APICALLING()
-    {
+    //---------------------------------------------------
+    //MARK: - VAlidation Check
+    //---------------------------------------------------
+    func validationCheck(){
+        
+        guard let userName  = self.txtName.text , userName != "" else{
+            print("Please Enter Name")
+            UIAlertController.showAlertWithOkButton(self, aStrMessage: "Pls Eneter Username.", completion: nil)
 
+            return
+        }
+
+        guard let passwrod  = self.txtPassword.text , passwrod != "" else{
+            print("Please Enter Password")
+            UIAlertController.showAlertWithOkButton(self, aStrMessage: "Pls Eneter Password.", completion: nil)
+
+            return
+        }
+        self.CallAPIToLogin()
+
+    }
+    
+    //---------------------------------------------------
+    //MARK: - API CALL Login
+    //---------------------------------------------------
+    func CallAPIToLogin()
+    {
+        
         let loginAPIUrl = "http://212.118.26.115/FileworxMobileServer/api/Account/Login"
         let aParameter: [String: Any] = ["userName": self.txtName.text!, "Password":self.txtPassword.text!,"LastLoginLanguageID":"1","AuthenticationType":"0"];
-
+        
         KPAPIManager.POST(loginAPIUrl, param:aParameter, controller: self, successBlock: { (jsonResponse) in
+            
             print("success response is received")
-            print(jsonResponse)
-
             self.objPKLoginModel = PKLoginModel(json: jsonResponse)
-           if self.objPKLoginModel?.result == 0
+            if self.objPKLoginModel?.result == 0
             {
                 let storyboard = UIStoryboard(storyboard:.Messages)
                 let viewController: PKMessageVC = storyboard.instantiateViewController()
                 self.navigationController?.pushViewController(viewController, animated: true)
-
             }
             
-           
-
-       }) { (error, isTimeOut) in
-
+        })
+        {(error, isTimeOut) in
             print("Getting Error")
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
