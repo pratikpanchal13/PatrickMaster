@@ -13,7 +13,6 @@ import UIKit
 extension UIStoryboard {
     
     /// The uniform place where we state all the storyboard we have in our application
-    
     enum Storyboard: String {
         case main
         case news
@@ -49,4 +48,5 @@ extension UIStoryboard {
         return viewController
     }
 }
+
 
