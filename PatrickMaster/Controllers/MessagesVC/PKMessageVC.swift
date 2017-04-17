@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MMDrawerController
 
 class PKMessageVC: UIViewController {
 
@@ -32,4 +33,8 @@ class PKMessageVC: UIViewController {
     }
     */
 
+    @IBAction func btnSideMenu(_ sender: Any) {
+        self.mm_drawerController?.toggle(.left, animated: true, completion: nil)
+
+    }
 }

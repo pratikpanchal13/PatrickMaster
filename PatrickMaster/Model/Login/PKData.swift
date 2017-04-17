@@ -1,5 +1,5 @@
 //
-//  PKData.swift
+//  PKLoginData.swift
 //
 //  Created by  on 17/04/17
 //  Copyright (c) . All rights reserved.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-public final class PKData: NSCoding {
+public final class PKLoginData: NSCoding {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {

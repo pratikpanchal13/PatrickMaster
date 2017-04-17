@@ -19,7 +19,7 @@ public final class PKLoginModel: NSCoding {
 
   // MARK: Properties
   public var result: Int?
-  public var data: PKData?
+  public var data: PKLoginData?
   public var message: String?
 
   // MARK: SwiftyJSON Initializers
@@ -36,7 +36,7 @@ public final class PKLoginModel: NSCoding {
   /// - parameter json: JSON object from SwiftyJSON.
   public required init(json: JSON) {
     result = json[SerializationKeys.result].int
-    data = PKData(json: json[SerializationKeys.data])
+    data = PKLoginData(json: json[SerializationKeys.data])
     message = json[SerializationKeys.message].string
   }
 
@@ -54,7 +54,7 @@ public final class PKLoginModel: NSCoding {
   // MARK: NSCoding Protocol
   required public init(coder aDecoder: NSCoder) {
     self.result = aDecoder.decodeObject(forKey: SerializationKeys.result) as? Int
-    self.data = aDecoder.decodeObject(forKey: SerializationKeys.data) as? PKData
+    self.data = aDecoder.decodeObject(forKey: SerializationKeys.data) as? PKLoginData
     self.message = aDecoder.decodeObject(forKey: SerializationKeys.message) as? String
   }
 

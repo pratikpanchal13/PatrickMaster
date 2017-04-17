@@ -33,7 +33,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ky-o0-lfe" userLabel="WAM THEME">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginQNA" translatesAutoresizingMaskIntoConstraints="NO" id="AIU-h0-p8E">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AIU-h0-p8E">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pM2-QM-bnm">
@@ -45,7 +45,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hh-kL-gzI">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_QNA2" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-CU-pOk">
+                                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-CU-pOk">
                                                                 <rect key="frame" x="0.0" y="155" width="375" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="sHR-Za-hda"/>
@@ -70,7 +70,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsa-5K-j5h" userLabel="UserNAme">
                                                                 <rect key="frame" x="0.0" y="17" width="375" height="66"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_WAM" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-YY-744">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-YY-744">
                                                                         <rect key="frame" x="48" y="25" width="27" height="27"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="27" id="1zJ-hf-DPu"/>
@@ -114,7 +114,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-OG-b1i" userLabel="Password">
                                                                 <rect key="frame" x="0.0" y="91" width="375" height="66"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locked_WAM" translatesAutoresizingMaskIntoConstraints="NO" id="jue-82-WJ5">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jue-82-WJ5">
                                                                         <rect key="frame" x="48" y="18" width="21" height="26"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="26" id="Vct-2c-SdM"/>
@@ -341,10 +341,4 @@
             <point key="canvasLocation" x="2664.8000000000002" y="-475.41229385307349"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LoginQNA" width="16" height="16"/>
-        <image name="Logo_QNA2" width="16" height="16"/>
-        <image name="locked_WAM" width="16" height="16"/>
-        <image name="user_WAM" width="16" height="16"/>
-    </resources>
 </document>

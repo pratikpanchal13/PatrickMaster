@@ -33,6 +33,10 @@
 		A9E105BF1EA4D48B0061B897 /* PKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105BB1EA4D48B0061B897 /* PKData.swift */; };
 		A9E105C01EA4D48B0061B897 /* PKLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105BC1EA4D48B0061B897 /* PKLoginModel.swift */; };
 		A9E105C11EA4D48B0061B897 /* PKScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105BD1EA4D48B0061B897 /* PKScreens.swift */; };
+		A9E105C61EA4E0F30061B897 /* FWLeftSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105C31EA4E0F30061B897 /* FWLeftSideMenu.swift */; };
+		A9E105C71EA4E0F30061B897 /* FWLeftSideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105C51EA4E0F30061B897 /* FWLeftSideMenuCell.swift */; };
+		A9E105CB1EA4E2D50061B897 /* FWUtilityDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105CA1EA4E2D50061B897 /* FWUtilityDrawer.swift */; };
+		A9E105CC1EA4EA0C0061B897 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E105C81EA4E1470061B897 /* SideMenu.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,10 @@
 		A9E105BB1EA4D48B0061B897 /* PKData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKData.swift; sourceTree = "<group>"; };
 		A9E105BC1EA4D48B0061B897 /* PKLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKLoginModel.swift; sourceTree = "<group>"; };
 		A9E105BD1EA4D48B0061B897 /* PKScreens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKScreens.swift; sourceTree = "<group>"; };
+		A9E105C31EA4E0F30061B897 /* FWLeftSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWLeftSideMenu.swift; sourceTree = "<group>"; };
+		A9E105C51EA4E0F30061B897 /* FWLeftSideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWLeftSideMenuCell.swift; sourceTree = "<group>"; };
+		A9E105C81EA4E1470061B897 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		A9E105CA1EA4E2D50061B897 /* FWUtilityDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWUtilityDrawer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +201,7 @@
 		A9E105721EA496A10061B897 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9E105C21EA4E0F30061B897 /* SideMenuVC */,
 				A9E105941EA4A16D0061B897 /* LoginVC */,
 				A9E105961EA4A16D0061B897 /* MessagesVC */,
 			);
@@ -234,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				A9E1057E1EA49B5E0061B897 /* Webservic */,
+				A9E105CA1EA4E2D50061B897 /* FWUtilityDrawer.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -252,6 +262,7 @@
 				A9E1057B1EA499760061B897 /* Main.storyboard */,
 				A9E1058A1EA49D2E0061B897 /* Login.storyboard */,
 				A9E105921EA4A13A0061B897 /* Messages.storyboard */,
+				A9E105C81EA4E1470061B897 /* SideMenu.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -324,6 +335,23 @@
 				A9E105BD1EA4D48B0061B897 /* PKScreens.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A9E105C21EA4E0F30061B897 /* SideMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				A9E105C31EA4E0F30061B897 /* FWLeftSideMenu.swift */,
+				A9E105C41EA4E0F30061B897 /* FWLeftSideMenuCell */,
+			);
+			path = SideMenuVC;
+			sourceTree = "<group>";
+		};
+		A9E105C41EA4E0F30061B897 /* FWLeftSideMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				A9E105C51EA4E0F30061B897 /* FWLeftSideMenuCell.swift */,
+			);
+			path = FWLeftSideMenuCell;
 			sourceTree = "<group>";
 		};
 		C124DC0ADBB6788B503B9A00 /* Pods */ = {
@@ -465,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E105CC1EA4EA0C0061B897 /* SideMenu.storyboard in Resources */,
 				A9E1058B1EA49D2E0061B897 /* Login.storyboard in Resources */,
 				A9E1057D1EA499760061B897 /* Main.storyboard in Resources */,
 				A9E105421EA4871D0061B897 /* Assets.xcassets in Resources */,
@@ -633,6 +662,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9E105891EA49D050061B897 /* Constant_Storyboard.swift in Sources */,
+				A9E105C61EA4E0F30061B897 /* FWLeftSideMenu.swift in Sources */,
+				A9E105CB1EA4E2D50061B897 /* FWUtilityDrawer.swift in Sources */,
 				A9E1059F1EA4A57B0061B897 /* PKStoryboard.swift in Sources */,
 				A9E105BE1EA4D48B0061B897 /* PKAvailableModules.swift in Sources */,
 				A9E105971EA4A16D0061B897 /* PKLoginVC.swift in Sources */,
@@ -642,6 +673,7 @@
 				A9E105851EA49C4F0061B897 /* Constant_Size.swift in Sources */,
 				A9E105C11EA4D48B0061B897 /* PKScreens.swift in Sources */,
 				A9E105991EA4A1800061B897 /* PKMessageVC.swift in Sources */,
+				A9E105C71EA4E0F30061B897 /* FWLeftSideMenuCell.swift in Sources */,
 				A9E105831EA49B5E0061B897 /* KPAPIManager.swift in Sources */,
 				A9E105A81EA4A71C0061B897 /* StoryboardIdentifiable.swift in Sources */,
 				A9E105A51EA4A66A0061B897 /* UIViewController+StoryboardIdentifier.swift in Sources */,

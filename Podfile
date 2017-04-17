@@ -14,6 +14,7 @@ target 'PatrickMaster' do
 
   # Pods for MBProgressHUD
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'MMDrawerController'
 
   
   target 'PatrickMasterTests' do
