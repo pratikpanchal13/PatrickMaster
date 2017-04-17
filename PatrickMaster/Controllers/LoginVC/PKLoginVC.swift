@@ -85,8 +85,15 @@ class PKLoginVC: UIViewController {
             print("success response is received")
             self.objPKLoginModel = PKLoginModel(json: jsonResponse)
             
-//            self.objPKAvailableModules  = self.objPKLoginModel?.data?.availableModules
-//            self.objPKScreens = self.objPKAvailableModules?[0].screens
+            self.objPKAvailableModules  = self.objPKLoginModel?.data?.availableModules
+            self.objPKScreens = self.objPKAvailableModules?[0].screens
+            
+            
+            
+            AppDelegate().appDelegate().objModelPKLoginModel = self.objPKLoginModel
+            AppDelegate().appDelegate().objModelPKAvailableModules = self.objPKAvailableModules
+            AppDelegate().appDelegate().objModelPKScreens = self.objPKScreens
+
             
             if self.objPKLoginModel?.result == 0
             {

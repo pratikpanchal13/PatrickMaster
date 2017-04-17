@@ -11,8 +11,17 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    var objModelPKAvailableModules : [PKAvailableModules]?
+    var objModelPKScreens : [PKScreens]?
+    var objModelPKLoginModel : PKLoginModel?
+
     var window: UIWindow?
 
+    func appDelegate () -> AppDelegate
+    {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

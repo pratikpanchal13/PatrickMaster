@@ -12,19 +12,40 @@ import MMDrawerController
 class FWLeftSideMenu: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //Mark: - Properties & Outlets
+    
+    //---------------------------------------------------
+    //MARK: - Variable Declaration For ModelObject
+    //---------------------------------------------------
+    var objPKLoginModel : [PKAvailableModules]?
+ 
+    @IBOutlet weak var tblView: UITableView!
 
-    var menuItems:[String] = ["Message","Media"];
+//    var menuItems:[String] = ["Message","Media"];
+    var menuItems:[String] = [];
     
     // Mark: - View Life Cycle
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.isNavigationBarHidden = true
-
-    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.objPKLoginModel  = AppDelegate().appDelegate().objModelPKAvailableModules
+        for i in self.objPKLoginModel! {
+            
+            print("My Caption \(String(describing: i.caption))")
+            menuItems.append(i.caption!)
+        }
+        
+        print("menuItems \(menuItems)")
+        tblView.reloadData()
+
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    
+        self.navigationController?.isNavigationBarHidden = true
+        
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

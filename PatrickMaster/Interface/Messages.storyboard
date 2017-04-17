@@ -225,6 +225,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tblView" destination="nwC-K6-etE" id="PmP-tW-ez2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRN-E1-E2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
