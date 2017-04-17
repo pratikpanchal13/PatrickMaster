@@ -257,18 +257,18 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="i4y-6H-vqf"/>
                                                         <exclude reference="S7E-Qy-zJy"/>
+                                                        <exclude reference="i4y-6H-vqf"/>
                                                         <exclude reference="mch-Hx-bTP"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <mask key="constraints">
-                                                        <include reference="i4y-6H-vqf"/>
                                                         <include reference="S7E-Qy-zJy"/>
-                                                        <exclude reference="mch-Hx-bTP"/>
                                                         <exclude reference="gbK-d0-nxe"/>
+                                                        <include reference="i4y-6H-vqf"/>
                                                         <exclude reference="mOy-d7-0Np"/>
+                                                        <exclude reference="mch-Hx-bTP"/>
                                                     </mask>
                                                 </variation>
                                             </view>
@@ -310,6 +310,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e1u-nc-qAu"/>
+                    <connections>
+                        <outlet property="txtName" destination="Zdm-Q9-Dv7" id="E46-fe-o5d"/>
+                        <outlet property="txtPassword" destination="GKx-ug-5W9" id="7wh-Np-ah4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nU-8s-WmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

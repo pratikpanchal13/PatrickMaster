@@ -10,7 +10,7 @@ import UIKit
 import SystemConfiguration
 import Alamofire
 import SwiftyJSON
-
+import MBProgressHUD
 
 private struct KPAPIStruct {
     
@@ -118,7 +118,8 @@ class KPAPIManager: NSObject {
                    failureBlock: @escaping (_ error: Error? , _ isTimeOut: Bool) -> Void) {
         
         if KPAPIManager.isConnectedToNetwork() {
-            
+            MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+
             // Internet is connected
             
             let headers = [
@@ -126,7 +127,7 @@ class KPAPIManager: NSObject {
             ]
             
             print("---- GET REQUEST URL : \(url)")
-            print("---- GET REQUEST PARAM : \(param)")
+            print("---- GET REQUEST PARAM : \(String(describing: param))")
             
             APIManager.sharedManager.request(url, method: .get, parameters: param, encoding: JSONEncoding.default, headers: headers).responseJSON(completionHandler: { (response) in
                 
@@ -151,6 +152,7 @@ class KPAPIManager: NSObject {
                     
                 case .failure(let error):
                     
+                    MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
                     print(error)
                     if (error as NSError).code == -1001 {
                         // The request timed out error occured. // Code=-1001 "The request timed out."
@@ -168,6 +170,7 @@ class KPAPIManager: NSObject {
             
         } else {
             
+            MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
             // Internet is not connected
             UIAlertController.showAlertWithOkButton(controller, aStrMessage: "Internet is not available", completion: nil)
             let aErrorConnection = NSError(domain: "InternetNotAvailable", code: 0456, userInfo: nil)
@@ -216,7 +219,8 @@ class KPAPIManager: NSObject {
                     failureBlock: @escaping (_ error: Error? , _ isTimeOut: Bool) -> Void) {
         
         if KPAPIManager.isConnectedToNetwork() {
-            
+            MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+    
             // Internet is connected
             
             let headers = [
@@ -241,6 +245,7 @@ class KPAPIManager: NSObject {
                     
                     if let aJSON = response.result.value {
                         
+                        MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
                         let json = JSON(aJSON)
                         print("---- POST SUCCESS RESPONSE : \(json)")
                         successBlock(json)
@@ -248,7 +253,8 @@ class KPAPIManager: NSObject {
                     }
                     
                 case .failure(let error):
-                    
+                    MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
+
                     print(error)
                     if (error as NSError).code == -1001 {
                         // The request timed out error occured. // Code=-1001 "The request timed out."
@@ -266,6 +272,7 @@ class KPAPIManager: NSObject {
             
         } else {
             
+            MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
             // Internet is not connected
             UIAlertController.showAlertWithOkButton(controller, aStrMessage: "Internet is not available", completion: nil)
             let aErrorConnection = NSError(domain: "InternetNotAvailable", code: 0456, userInfo: nil)
@@ -336,7 +343,8 @@ class KPAPIManager: NSObject {
         
         
         if KPAPIManager.isConnectedToNetwork() {
-            
+            MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
+
 //            MMSwiftSpinner.show("Uploading...")
             
             var aParam = param
@@ -547,7 +555,9 @@ class KPAPIManager: NSObject {
                 
                 switch encodingResult {
                 case .success(let upload, _, _):
-                    
+                  
+                    MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
+
                     upload.responseJSON { response in
                         
                         print(response.timeline)
@@ -563,7 +573,8 @@ class KPAPIManager: NSObject {
                     }
                     
                 case .failure(let error):
-                    
+                    MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
+
                     print(error)
                     if (error as NSError).code == -1001 {
                         // The request timed out error occured. // Code=-1001 "The request timed out."
@@ -581,6 +592,8 @@ class KPAPIManager: NSObject {
             
         } else {
             
+            MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
+
             // Internet is not connected
             UIAlertController.showAlertWithOkButton(controller, aStrMessage: "Internet is not available", completion: nil)
             let aErrorConnection = NSError(domain: "InternetNotAvailable", code: 0456, userInfo: nil)

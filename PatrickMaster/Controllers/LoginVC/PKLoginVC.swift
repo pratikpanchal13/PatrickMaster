@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class PKLoginVC: UIViewController {
 
+    var objPKLoginModel : PKLoginModel?
+
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,13 +29,38 @@ class PKLoginVC: UIViewController {
 
     @IBAction func btnLoginClicked(_ sender: Any) {
      
+        self.APICALLING()
         
-        let storyboard = UIStoryboard(storyboard:.Messages)
-        let viewController: PKMessageVC = storyboard.instantiateViewController()
+        
+        
+    }
+    
+    
+    func APICALLING()
+    {
 
-//        present(viewController, animated: true, completion: nil)
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
+        let loginAPIUrl = "http://212.118.26.115/FileworxMobileServer/api/Account/Login"
+        let aParameter: [String: Any] = ["userName": self.txtName.text!, "Password":self.txtPassword.text!,"LastLoginLanguageID":"1","AuthenticationType":"0"];
+
+        KPAPIManager.POST(loginAPIUrl, param:aParameter, controller: self, successBlock: { (jsonResponse) in
+            print("success response is received")
+            print(jsonResponse)
+
+            self.objPKLoginModel = PKLoginModel(json: jsonResponse)
+           if self.objPKLoginModel?.result == 0
+            {
+                let storyboard = UIStoryboard(storyboard:.Messages)
+                let viewController: PKMessageVC = storyboard.instantiateViewController()
+                self.navigationController?.pushViewController(viewController, animated: true)
+
+            }
+            
+           
+
+       }) { (error, isTimeOut) in
+
+            print("Getting Error")
+        }
     }
     
 
