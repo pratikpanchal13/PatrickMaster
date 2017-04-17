@@ -16,8 +16,8 @@ extension UIStoryboard {
     enum Storyboard: String {
         case main
         case Login
-        case SideMenu
         case Messages
+        case LeftSideMenu
         
         var filename: String {
             return rawValue.capitalized

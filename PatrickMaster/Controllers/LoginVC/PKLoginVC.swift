@@ -109,15 +109,14 @@ class PKLoginVC: UIViewController {
     func openSideMenu(){
         
         
-        let storyboardMessages = UIStoryboard(storyboard:.Messages)
-        let storyboardSideMenu = UIStoryboard(storyboard:.main)
+//        let storyboardMessages = UIStoryboard(storyboard:.Messages)
+//        let storyboardSidemenu = UIStoryboard(storyboard:.LeftSideMenu)
 
-//        let storyboardDashBoard = UIStoryboard(name: "SideMenu", bundle: nil)
-//        let storyboardDashBoard2 = UIStoryboard(name: "Messages", bundle: nil)
+        let storyboardDashBoard2 = UIStoryboard(name: "Messages", bundle: nil)
 
-        let leftDrawer = storyboardSideMenu.instantiateViewController(withIdentifier: "FWLeftSideMenu")
+        let leftDrawer = storyboardDashBoard2.instantiateViewController(withIdentifier: "FWLeftSideMenu")
         
-        let centerVC = storyboardMessages.instantiateViewController(withIdentifier: "PKMessageVC")
+        let centerVC = storyboardDashBoard2.instantiateViewController(withIdentifier: "PKMessageVC")
         let drawerController = MMDrawerController.init(center: centerVC, leftDrawerViewController: leftDrawer)
         
         drawerController?.shouldStretchDrawer = false
