@@ -21,6 +21,12 @@ class DashboardVC: UIViewController {
         view.frame = CGRect(x: 0, y: 0, width: self.viewAdvertiesment.frame.size.width, height: self.viewAdvertiesment.frame.size.height)
         self.viewAdvertiesment.addSubview(view)
 
+        view.advertiesMentIndex = { index in
+            
+            print("Selected Index is \(index)")
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

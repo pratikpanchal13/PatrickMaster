@@ -52,10 +52,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r5-5z-6dy">
-                                <rect key="frame" x="0.0" y="74" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="tgt-f1-PG6"/>
+                                    <constraint firstAttribute="height" constant="200" id="tgt-f1-PG6"/>
                                 </constraints>
                             </view>
                         </subviews>

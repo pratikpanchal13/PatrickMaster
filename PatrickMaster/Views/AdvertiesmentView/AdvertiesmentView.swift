@@ -8,9 +8,11 @@
 
 import UIKit
 
-class AdvertiesmentView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class AdvertiesmentView: UIView,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate {
 
     let cellsPerRow:CGFloat = 1
+    
+    public var advertiesMentIndex:(_ index : Int)->()  = {_ in}
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -36,12 +38,11 @@ class AdvertiesmentView: UIView,UICollectionViewDelegate,UICollectionViewDataSou
         self.collectionView.register(nibName, forCellWithReuseIdentifier: "AdvertiesmentCell")
         self.collectionView.reloadData()
     
-        
     }
 }
 
 
-
+// MARK: - Collection view DataSource Method
 extension AdvertiesmentView {
     
     // MARK: - UICollectionViewDataSource protocol
@@ -65,10 +66,15 @@ extension AdvertiesmentView {
     // MARK: - UICollectionViewDelegate protocol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        
+        self.advertiesMentIndex(indexPath.row)  // Call Back Selected Index Collection view
         
     }
+}
 
+//MARK: - CollectionView Flow Layout Delegate
+extension AdvertiesmentView {
+ 
     func collectionView(collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -82,7 +88,7 @@ extension AdvertiesmentView {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: CGFloat((collectionView.frame.size.width / cellsPerRow ) ), height: CGFloat(200))
+        return CGSize(width: CGFloat((collectionView.frame.size.width / cellsPerRow ) ), height: collectionView.frame.size.height)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
@@ -92,9 +98,20 @@ extension AdvertiesmentView {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-
-   
-    
 }
 
+
+// MARK: - ScrollView Delegate
+extension AdvertiesmentView {
+    
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) // called when scroll view grinds to a halt
+    {
+        for cell in collectionView.visibleCells  as [UICollectionViewCell]    {
+            let indexPath = collectionView.indexPath(for: cell as UICollectionViewCell)
+            
+            self.advertiesMentIndex((indexPath?.row)!)  // Call Back for Selected Scrolling Index
+        }
+    }
+
+}
 
