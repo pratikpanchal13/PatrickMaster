@@ -24,6 +24,13 @@ class DashboardVC: UIViewController {
         view.advertiesMentIndex = { index in
             
             print("Selected Index is \(index)")
+            
+            
+//            let storyboard = UIStoryboard(storyboard:.Pagermenu)
+            let storyboard = UIStoryboard(name: "PagerMenu", bundle: nil)
+
+            let viewController: PagerMenuVC = storyboard.instantiateViewController()
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         
         

@@ -19,6 +19,7 @@ extension UIStoryboard {
         case Messages
         case LeftSideMenu
         case Dashboard
+        case Pagermenu
         
         var filename: String {
             return rawValue.capitalized

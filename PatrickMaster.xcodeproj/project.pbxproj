@@ -43,6 +43,11 @@
 		A9E105C71EA4E0F30061B897 /* FWLeftSideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105C51EA4E0F30061B897 /* FWLeftSideMenuCell.swift */; };
 		A9E105CB1EA4E2D50061B897 /* FWUtilityDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E105CA1EA4E2D50061B897 /* FWUtilityDrawer.swift */; };
 		A9E105D01EA4EC840061B897 /* LeftSideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E105CF1EA4EC840061B897 /* LeftSideMenu.storyboard */; };
+		A9F99E471EA8E7DB00D32EF4 /* PagerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F99E461EA8E7DB00D32EF4 /* PagerMenu.storyboard */; };
+		A9F99E491EA8E80C00D32EF4 /* PagerMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F99E481EA8E80C00D32EF4 /* PagerMenuVC.swift */; };
+		A9F99E4B1EA8EEEC00D32EF4 /* PagerSubMenu1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F99E4A1EA8EEEC00D32EF4 /* PagerSubMenu1.swift */; };
+		A9F99E4D1EA8EEFC00D32EF4 /* PagerSubMenu2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F99E4C1EA8EEFC00D32EF4 /* PagerSubMenu2.swift */; };
+		A9F99E4F1EA8EF0600D32EF4 /* PagerSubMenu3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F99E4E1EA8EF0600D32EF4 /* PagerSubMenu3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +116,11 @@
 		A9E105C51EA4E0F30061B897 /* FWLeftSideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWLeftSideMenuCell.swift; sourceTree = "<group>"; };
 		A9E105CA1EA4E2D50061B897 /* FWUtilityDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWUtilityDrawer.swift; sourceTree = "<group>"; };
 		A9E105CF1EA4EC840061B897 /* LeftSideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LeftSideMenu.storyboard; sourceTree = "<group>"; };
+		A9F99E461EA8E7DB00D32EF4 /* PagerMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PagerMenu.storyboard; sourceTree = "<group>"; };
+		A9F99E481EA8E80C00D32EF4 /* PagerMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerMenuVC.swift; path = PatrickMaster/Interface/PagerMenuVC.swift; sourceTree = SOURCE_ROOT; };
+		A9F99E4A1EA8EEEC00D32EF4 /* PagerSubMenu1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerSubMenu1.swift; path = PatrickMaster/Interface/PagerSubMenu1.swift; sourceTree = SOURCE_ROOT; };
+		A9F99E4C1EA8EEFC00D32EF4 /* PagerSubMenu2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerSubMenu2.swift; path = PatrickMaster/Interface/PagerSubMenu2.swift; sourceTree = SOURCE_ROOT; };
+		A9F99E4E1EA8EF0600D32EF4 /* PagerSubMenu3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerSubMenu3.swift; path = PatrickMaster/Interface/PagerSubMenu3.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,18 @@
 				A9332F4F1EA88D5600DF1DF8 /* AdvertiesmentCell.xib */,
 			);
 			path = AdvertiesmentCell;
+			sourceTree = "<group>";
+		};
+		A9332F521EA8E67E00DF1DF8 /* PagerMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				A9F99E481EA8E80C00D32EF4 /* PagerMenuVC.swift */,
+				A9F99E4A1EA8EEEC00D32EF4 /* PagerSubMenu1.swift */,
+				A9F99E4C1EA8EEFC00D32EF4 /* PagerSubMenu2.swift */,
+				A9F99E4E1EA8EF0600D32EF4 /* PagerSubMenu3.swift */,
+			);
+			name = PagerMenuVC;
+			path = PagerMenu;
 			sourceTree = "<group>";
 		};
 		A9E1052E1EA4871D0061B897 = {
@@ -247,6 +269,7 @@
 		A9E105721EA496A10061B897 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9332F521EA8E67E00DF1DF8 /* PagerMenuVC */,
 				A9332F411EA8853C00DF1DF8 /* DashboardVC */,
 				A9E105C21EA4E0F30061B897 /* SideMenuVC */,
 				A9E105941EA4A16D0061B897 /* LoginVC */,
@@ -313,6 +336,7 @@
 				A9E105921EA4A13A0061B897 /* Messages.storyboard */,
 				A9E105CF1EA4EC840061B897 /* LeftSideMenu.storyboard */,
 				A9332F441EA8858000DF1DF8 /* Dashboard.storyboard */,
+				A9F99E461EA8E7DB00D32EF4 /* PagerMenu.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -552,6 +576,7 @@
 				A9332F451EA8858000DF1DF8 /* Dashboard.storyboard in Resources */,
 				A9332F511EA88D5600DF1DF8 /* AdvertiesmentCell.xib in Resources */,
 				A9E1057C1EA499760061B897 /* LaunchScreen.storyboard in Resources */,
+				A9F99E471EA8E7DB00D32EF4 /* PagerMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,12 +742,15 @@
 				A9E105891EA49D050061B897 /* Constant_Storyboard.swift in Sources */,
 				A9332F4A1EA88ACF00DF1DF8 /* AdvertiesmentView.swift in Sources */,
 				A9332F431EA8855200DF1DF8 /* DashboardVC.swift in Sources */,
+				A9F99E491EA8E80C00D32EF4 /* PagerMenuVC.swift in Sources */,
+				A9F99E4D1EA8EEFC00D32EF4 /* PagerSubMenu2.swift in Sources */,
 				A9E105C61EA4E0F30061B897 /* FWLeftSideMenu.swift in Sources */,
 				A9E105CB1EA4E2D50061B897 /* FWUtilityDrawer.swift in Sources */,
 				A9E1059F1EA4A57B0061B897 /* PKStoryboard.swift in Sources */,
 				A9E105BE1EA4D48B0061B897 /* PKAvailableModules.swift in Sources */,
 				A9332F501EA88D5600DF1DF8 /* AdvertiesmentCell.swift in Sources */,
 				A9E105971EA4A16D0061B897 /* PKLoginVC.swift in Sources */,
+				A9F99E4F1EA8EF0600D32EF4 /* PagerSubMenu3.swift in Sources */,
 				A9E105BF1EA4D48B0061B897 /* PKData.swift in Sources */,
 				A9E1059E1EA4A57B0061B897 /* PKAlertController.swift in Sources */,
 				A9E105821EA49B5E0061B897 /* ImageExtention.swift in Sources */,
@@ -734,6 +762,7 @@
 				A9E105A81EA4A71C0061B897 /* StoryboardIdentifiable.swift in Sources */,
 				A9E105A51EA4A66A0061B897 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				A9E1053D1EA4871D0061B897 /* ViewController.swift in Sources */,
+				A9F99E4B1EA8EEEC00D32EF4 /* PagerSubMenu1.swift in Sources */,
 				A9E105C01EA4D48B0061B897 /* PKLoginModel.swift in Sources */,
 				A9E1053B1EA4871D0061B897 /* AppDelegate.swift in Sources */,
 			);

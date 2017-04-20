@@ -16,6 +16,7 @@ target 'PatrickMaster' do
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'MMDrawerController'
 
+  pod 'PageMenu'
   
   target 'PatrickMasterTests' do
     inherit! :search_paths

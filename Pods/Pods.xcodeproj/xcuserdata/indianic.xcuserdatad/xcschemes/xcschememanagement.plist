@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PageMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PatrickMaster.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1219F87BEBF09E9A33AC705DC8BAAD5A</key>
+		<key>0FB4E6BF6EA7384C2C7A9CA3813D82FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>91B54391A0FC20171736484E86DD39CF</key>
+		<key>978A447F57E812AEE5D676FF361F1416</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A8FAB4675B15F8258B6C19B71077B859</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6EA932343D9DC72534B74FB62E4B84F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
