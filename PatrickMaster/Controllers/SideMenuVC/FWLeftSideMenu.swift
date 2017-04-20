@@ -72,8 +72,19 @@ class FWLeftSideMenu: UIViewController, UITableViewDataSource, UITableViewDelega
 //            let aStoryboard = UIStoryboard(name: "LoginSplash", bundle: nil)
 //            let centerVC = aStoryboard.instantiateViewController(withIdentifier: "MessageVC")
 //            self.mm_drawerController?.setCenterView(centerVC, withCloseAnimation: true, completion: nil)
+            
+            let storyboard = UIStoryboard(storyboard:.Messages)
+            let viewController: PKMessageVC = storyboard.instantiateViewController()
+            self.mm_drawerController?.setCenterView(viewController, withCloseAnimation: true, completion: nil)
+
             break;
         case 1:
+            
+            
+            let storyboard = UIStoryboard(storyboard:.Dashboard)
+            let viewController: DashboardVC = storyboard.instantiateViewController()
+            self.mm_drawerController?.setCenterView(viewController, withCloseAnimation: true, completion: nil)
+
 //            NotificationCenter.default.post(name: NSNotification.Name(FWUtilityNotification().FWConstSetHomePage), object:"MediaVC")
             
 //            let aStoryboard = UIStoryboard(name: "LoginSplash", bundle: nil)

@@ -18,6 +18,7 @@ extension UIStoryboard {
         case Login
         case Messages
         case LeftSideMenu
+        case Dashboard
         
         var filename: String {
             return rawValue.capitalized

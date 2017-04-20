@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bk9-j0-6bX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Dashboard-->
+        <scene sceneID="ilk-eq-rSt">
+            <objects>
+                <viewController storyboardIdentifier="DashboardVC" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bk9-j0-6bX" customClass="DashboardVC" customModule="PatrickMaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y1f-7e-ImD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aut-b7-Aal"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VnA-iP-qlD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-uF-Ihl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYs-qj-H7Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="74"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="="/>
+                                        <connections>
+                                            <action selector="btnMenuClicked:" destination="Bk9-j0-6bX" eventType="touchUpInside" id="6Dx-yx-Mtd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA7-c2-AKx">
+                                        <rect key="frame" x="166" y="28" width="43" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90533788069999999" green="0.10095439959999999" blue="0.29002110679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bA7-c2-AKx" firstAttribute="centerX" secondItem="Veo-uF-Ihl" secondAttribute="centerX" id="2qH-SZ-XXr"/>
+                                    <constraint firstItem="bA7-c2-AKx" firstAttribute="centerY" secondItem="Veo-uF-Ihl" secondAttribute="centerY" id="XnF-ph-aBN"/>
+                                    <constraint firstAttribute="height" constant="74" id="ZRU-Qw-rie"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r5-5z-6dy">
+                                <rect key="frame" x="0.0" y="74" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="tgt-f1-PG6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15410047769546509" green="0.41306763887405396" blue="0.69063264131546021" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6r5-5z-6dy" firstAttribute="top" secondItem="Veo-uF-Ihl" secondAttribute="bottom" id="2EZ-33-XnY"/>
+                            <constraint firstItem="Veo-uF-Ihl" firstAttribute="leading" secondItem="VnA-iP-qlD" secondAttribute="leading" id="A0b-eS-9W0"/>
+                            <constraint firstItem="Veo-uF-Ihl" firstAttribute="top" secondItem="VnA-iP-qlD" secondAttribute="top" id="Ee3-ay-Tar"/>
+                            <constraint firstItem="6r5-5z-6dy" firstAttribute="leading" secondItem="VnA-iP-qlD" secondAttribute="leading" id="cyi-Sl-Bfy"/>
+                            <constraint firstAttribute="trailing" secondItem="6r5-5z-6dy" secondAttribute="trailing" id="gNz-0M-XZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Veo-uF-Ihl" secondAttribute="trailing" id="nIc-Gl-pqz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="bA7-c2-AKx" id="qZo-KC-q9U"/>
+                        <outlet property="viewAdvertiesment" destination="6r5-5z-6dy" id="Cu9-rU-iAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mpa-BE-3un" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="271.21439280359823"/>
+        </scene>
+    </scenes>
+</document>
