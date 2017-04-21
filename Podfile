@@ -19,6 +19,10 @@ target 'PatrickMaster' do
   pod 'PageMenu'
   
   pod 'TPKeyboardAvoiding'
+  
+  # Pod For load images
+  pod 'SDWebImage/WebP'
+
     
   target 'PatrickMasterTests' do
     inherit! :search_paths
