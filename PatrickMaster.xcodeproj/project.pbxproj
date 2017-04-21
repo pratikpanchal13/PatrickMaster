@@ -16,6 +16,10 @@
 		A9332F4A1EA88ACF00DF1DF8 /* AdvertiesmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9332F491EA88ACF00DF1DF8 /* AdvertiesmentView.swift */; };
 		A9332F501EA88D5600DF1DF8 /* AdvertiesmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9332F4E1EA88D5600DF1DF8 /* AdvertiesmentCell.swift */; };
 		A9332F511EA88D5600DF1DF8 /* AdvertiesmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9332F4F1EA88D5600DF1DF8 /* AdvertiesmentCell.xib */; };
+		A96E632E1EA9DA9300B540F4 /* PhototVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E632D1EA9DA9300B540F4 /* PhototVideoVC.swift */; };
+		A96E63301EA9DB2E00B540F4 /* PhotoVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96E632F1EA9DB2E00B540F4 /* PhotoVideo.storyboard */; };
+		A96E63331EA9DBA500B540F4 /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E63321EA9DBA500B540F4 /* EventVC.swift */; };
+		A96E63361EA9DE4A00B540F4 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E63351EA9DE4A00B540F4 /* EventListCell.swift */; };
 		A9E1053B1EA4871D0061B897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1053A1EA4871D0061B897 /* AppDelegate.swift */; };
 		A9E1053D1EA4871D0061B897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E1053C1EA4871D0061B897 /* ViewController.swift */; };
 		A9E105421EA4871D0061B897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E105411EA4871D0061B897 /* Assets.xcassets */; };
@@ -83,6 +87,10 @@
 		A9332F491EA88ACF00DF1DF8 /* AdvertiesmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertiesmentView.swift; sourceTree = "<group>"; };
 		A9332F4E1EA88D5600DF1DF8 /* AdvertiesmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertiesmentCell.swift; sourceTree = "<group>"; };
 		A9332F4F1EA88D5600DF1DF8 /* AdvertiesmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertiesmentCell.xib; sourceTree = "<group>"; };
+		A96E632D1EA9DA9300B540F4 /* PhototVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhototVideoVC.swift; sourceTree = "<group>"; };
+		A96E632F1EA9DB2E00B540F4 /* PhotoVideo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoVideo.storyboard; sourceTree = "<group>"; };
+		A96E63321EA9DBA500B540F4 /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
+		A96E63351EA9DE4A00B540F4 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		A9E105371EA4871D0061B897 /* PatrickMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatrickMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E1053A1EA4871D0061B897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E1053C1EA4871D0061B897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +205,30 @@
 			path = PagerMenu;
 			sourceTree = "<group>";
 		};
+		A96E632C1EA9DA8300B540F4 /* PhotoVideoVC */ = {
+			isa = PBXGroup;
+			children = (
+				A96E632D1EA9DA9300B540F4 /* PhototVideoVC.swift */,
+			);
+			path = PhotoVideoVC;
+			sourceTree = "<group>";
+		};
+		A96E63311EA9DB8900B540F4 /* EventVC */ = {
+			isa = PBXGroup;
+			children = (
+				A96E63321EA9DBA500B540F4 /* EventVC.swift */,
+			);
+			path = EventVC;
+			sourceTree = "<group>";
+		};
+		A96E63341EA9DE1400B540F4 /* EventListCell */ = {
+			isa = PBXGroup;
+			children = (
+				A96E63351EA9DE4A00B540F4 /* EventListCell.swift */,
+			);
+			path = EventListCell;
+			sourceTree = "<group>";
+		};
 		A9E1052E1EA4871D0061B897 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +301,8 @@
 		A9E105721EA496A10061B897 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A96E63311EA9DB8900B540F4 /* EventVC */,
+				A96E632C1EA9DA8300B540F4 /* PhotoVideoVC */,
 				A9332F521EA8E67E00DF1DF8 /* PagerMenuVC */,
 				A9332F411EA8853C00DF1DF8 /* DashboardVC */,
 				A9E105C21EA4E0F30061B897 /* SideMenuVC */,
@@ -321,6 +355,7 @@
 		A9E105781EA496A10061B897 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A96E63341EA9DE1400B540F4 /* EventListCell */,
 				A9332F4C1EA88D3B00DF1DF8 /* CollectionCell */,
 				A9332F461EA8892600DF1DF8 /* AdvertiesmentView */,
 			);
@@ -337,6 +372,7 @@
 				A9E105CF1EA4EC840061B897 /* LeftSideMenu.storyboard */,
 				A9332F441EA8858000DF1DF8 /* Dashboard.storyboard */,
 				A9F99E461EA8E7DB00D32EF4 /* PagerMenu.storyboard */,
+				A96E632F1EA9DB2E00B540F4 /* PhotoVideo.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -574,6 +610,7 @@
 				A9E105931EA4A13A0061B897 /* Messages.storyboard in Resources */,
 				A9332F481EA88AA300DF1DF8 /* Advertiesment.xib in Resources */,
 				A9332F451EA8858000DF1DF8 /* Dashboard.storyboard in Resources */,
+				A96E63301EA9DB2E00B540F4 /* PhotoVideo.storyboard in Resources */,
 				A9332F511EA88D5600DF1DF8 /* AdvertiesmentCell.xib in Resources */,
 				A9E1057C1EA499760061B897 /* LaunchScreen.storyboard in Resources */,
 				A9F99E471EA8E7DB00D32EF4 /* PagerMenu.storyboard in Resources */,
@@ -748,6 +785,7 @@
 				A9E105CB1EA4E2D50061B897 /* FWUtilityDrawer.swift in Sources */,
 				A9E1059F1EA4A57B0061B897 /* PKStoryboard.swift in Sources */,
 				A9E105BE1EA4D48B0061B897 /* PKAvailableModules.swift in Sources */,
+				A96E632E1EA9DA9300B540F4 /* PhototVideoVC.swift in Sources */,
 				A9332F501EA88D5600DF1DF8 /* AdvertiesmentCell.swift in Sources */,
 				A9E105971EA4A16D0061B897 /* PKLoginVC.swift in Sources */,
 				A9F99E4F1EA8EF0600D32EF4 /* PagerSubMenu3.swift in Sources */,
@@ -763,8 +801,10 @@
 				A9E105A51EA4A66A0061B897 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				A9E1053D1EA4871D0061B897 /* ViewController.swift in Sources */,
 				A9F99E4B1EA8EEEC00D32EF4 /* PagerSubMenu1.swift in Sources */,
+				A96E63361EA9DE4A00B540F4 /* EventListCell.swift in Sources */,
 				A9E105C01EA4D48B0061B897 /* PKLoginModel.swift in Sources */,
 				A9E1053B1EA4871D0061B897 /* AppDelegate.swift in Sources */,
+				A96E63331EA9DBA500B540F4 /* EventVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

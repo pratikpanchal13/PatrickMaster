@@ -18,6 +18,8 @@ target 'PatrickMaster' do
 
   pod 'PageMenu'
   
+  pod 'TPKeyboardAvoiding'
+    
   target 'PatrickMasterTests' do
     inherit! :search_paths
     # Pods for testing
